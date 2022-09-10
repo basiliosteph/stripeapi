@@ -26,18 +26,24 @@ $price = $stripe->prices->retrieve('price_1LgJlKH3YSRNu0EdlwlgGu8C',[]);
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
   </head>
-  <body>
+  <body style="background-color:#b094c4">
+  <nav class="navbar navbar-default" style="background-color:#b094c4" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" a href=""><img src="aespa.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+    </div>
+</nav>
     <section>
-      <div class="product">
-        <img src="<?php echo array_pop($product->images); ?>" alt="<?php echo $product->name; ?>" />
+      <div class="product" style="background-color:#E5E3E4">
+        <center><img src="<?php echo array_pop($product->images); ?>" alt="<?php echo $product->name; ?>" style="width:450px;height:450px;" /></center>
         <div class="description">
-          <h3><?php echo $product->name; ?></h3>
-          <p><?php echo $product->description; ?></p>
-          <h5><?php echo strtoupper($price->currency); ?> <?php echo $price->unit_amount_decimal; ?></h5>
+        <center><h3><?php echo $product->name; ?></h3></center>
+        <center><p><?php echo $product->description; ?></p></center>
+        <center><h5><?php echo strtoupper($price->currency); ?> <?php echo $price->unit_amount_decimal; ?></h5></center>
         </div>
       </div>
       <form action="/create-checkout-session.php" method="POST">
-        <button type="submit" id="checkout-button">Checkout</button>
+        <center><button type="submit" id="checkout-button" class="btn btn-primary btn-lg">Checkout</button></center>
       </form>
     </section>
   </body>
