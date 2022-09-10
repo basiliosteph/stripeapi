@@ -1,0 +1,11 @@
+{
+    "name": "user/stripe_1.12.0_windows_x86_64",
+    "autoload": {
+        "psr-4": {
+            "User\\Stripe1120WindowsX8664\\": "src/"
+        }
+    },
+    "require": {
+        "stripe/stripe-php": "^9.5"
+    }
+}
